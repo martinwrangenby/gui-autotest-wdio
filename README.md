@@ -120,7 +120,7 @@ npm run clear
 
 ## Github Actions
 
-The framework comes with a simple workflow running the functional tests in github actions on push
+The framework comes with a simple workflow running the functional and visual regression tests in github actions on push.
 
 ## Author's notes
 
@@ -139,3 +139,8 @@ Also, the html report does not work perfectly with the visual regression tests. 
 #### cookie handling
 
 Instead of manually closing the cookie popup for each test, it would be interesting to investigate if this could be handled conveniently under the hood instead (https://webdriver.io/docs/api/browser/getCookies/) (except for GUI tests that are set to validate the actual popup that is)
+
+#### firefox stale element in CI
+
+All tests runs stable locally (on my machine that is). The CI was introduced mainly to validate that that is the case in other contexts as well.
+the tests do pass in CI but warnings do appear in the firefox node for the Page interaction suite. In the end, since the test in question still pass, I've not considered this a blocker, but it's something that should be investigated moving forward.
