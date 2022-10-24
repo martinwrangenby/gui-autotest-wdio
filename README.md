@@ -118,6 +118,10 @@ npm run clear
 
 > ℹ️ Note: On test execution start, the result folder is cleared. So if you want to save a report, make sure to store it elsewhere before running a new set of tests
 
+## Github Actions
+
+The framework comes with a simple workflow running the functional tests in github actions on push
+
 ## Author's notes
 
 For the functional tests I’ve put more emphasis on the framework rather than the actual tests since I believe that the main benefit and purpose of E2E-frameworks of this sort is to be able to validate critical customer flows spanning over multiple pages, whereas page-isolated functionality can be validated at component-test level to a greater extent.  
