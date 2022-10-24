@@ -29,3 +29,11 @@ jobs:
     - name: Tear down target env
       if: always()
       run: npm run env:teardown
+
+    - name: Upload test artifacts
+      uses: actions/upload-artifact@v2
+      if: failure()
+      with:
+        name: e2e-test-artifacts
+        path: reports/html-reports/
+        retention-days: 10
