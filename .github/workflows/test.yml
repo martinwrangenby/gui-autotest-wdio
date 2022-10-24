@@ -1,0 +1,31 @@
+name: Test
+
+on:
+  push:
+
+jobs:
+  e2e-Test:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Configure node environment
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16.18
+
+    - name: Setup target env
+      run: npm run env:setup
+
+    - name: Install dependencies
+      run: npm i
+
+    - name: Run tests
+      run: npm run wdio:headless
+
+    - name: Tear down target env
+      if: always()
+      run: npm run env:teardown
