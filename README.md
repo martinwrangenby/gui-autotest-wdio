@@ -118,6 +118,10 @@ npm run clear
 
 > ℹ️ Note: On test execution start, the result folder is cleared. So if you want to save a report, make sure to store it elsewhere before running a new set of tests
 
+## Github Actions
+
+The framework comes with a simple workflow running the functional and visual regression tests in github actions on push.
+
 ## Author's notes
 
 For the functional tests I’ve put more emphasis on the framework rather than the actual tests since I believe that the main benefit and purpose of E2E-frameworks of this sort is to be able to validate critical customer flows spanning over multiple pages, whereas page-isolated functionality can be validated at component-test level to a greater extent.  
@@ -135,3 +139,8 @@ Also, the html report does not work perfectly with the visual regression tests. 
 #### cookie handling
 
 Instead of manually closing the cookie popup for each test, it would be interesting to investigate if this could be handled conveniently under the hood instead (https://webdriver.io/docs/api/browser/getCookies/) (except for GUI tests that are set to validate the actual popup that is)
+
+#### firefox stale element in CI
+
+All tests runs stable locally (on my machine that is). The CI was introduced mainly to validate that that is the case in other contexts as well.
+the tests do pass in CI but warnings do appear in the firefox node for the Page interaction suite. In the end, since the test in question still pass, I've not considered this a blocker, but it's something that should be investigated moving forward.
