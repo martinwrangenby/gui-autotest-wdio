@@ -1,4 +1,5 @@
 export const acceptCookiePopup = async () => {
-  await $('#onetrust-accept-btn-handler').click();
-  await expect($('#onetrust-accept-btn-handler')).not.toBeDisplayed();
+  const cookieAcceptButton = await $('#onetrust-accept-btn-handler');
+  await cookieAcceptButton.click();
+  await expect(cookieAcceptButton).not.toBeDisplayed();
 };
