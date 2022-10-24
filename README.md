@@ -1,10 +1,10 @@
 # Wdio e2e test framework
 
-This is a e2e test framework build using [webdriverIO](https://webdriver.io/) that is set to validate [this](https://www.volvocars.com/intl/v/car-safety/a-million-more) page. The framework supports both functional and visual regression tests.
+This is a e2e test framework built using [webdriverIO](https://webdriver.io/) that is set to validate [this](https://www.volvocars.com/intl/v/car-safety/a-million-more) page. The framework supports both functional and visual regression tests.
 
 ## Preconditions
 
-You need the following support tools installed
+Make sure your local machine has the following set of tools installed:
 
 - Docker
 - node (prefered version: 16.18)
@@ -22,7 +22,7 @@ If you have `nvm` installed on your machine, initially run
 > nvm use
 ```
 
-To make sure that you're running the correct node version.
+To make sure that you're using the correct node version.
 
 Install all node dependencies:
 
