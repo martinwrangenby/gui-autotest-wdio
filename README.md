@@ -140,7 +140,8 @@ Also, the html report does not work perfectly with the visual regression tests. 
 
 Instead of manually closing the cookie popup for each test, it would be interesting to investigate if this could be handled conveniently under the hood instead (https://webdriver.io/docs/api/browser/getCookies/) (except for GUI tests that are set to validate the actual popup that is)
 
-#### firefox stale element in CI
+#### Test stability
 
 All tests runs stable locally (on my machine that is). The CI was introduced mainly to validate that that is the case in other contexts as well.
 the tests do pass in CI but warnings do appear in the firefox node for the Page interaction suite. In the end, since the test in question still pass, I've not considered this a blocker, but it's something that should be investigated moving forward.
+The carousel-test has also been proven to be a bit flaky in Ms Edge in CI (occational failures, but pass in majority of runs). In a real-life setup, this test would make sense to put in quarantine and investigate further, but I've deemed it ok for the scope of this asignment.
