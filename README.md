@@ -40,7 +40,7 @@ Only supported env variable at this point is `NODE_CONCURRENCY` which sets how m
 ### Environment
 
 The framework comes with a dockerized Selenium Grid environment containing nodes for Google Chrome, Firefox and Microsort Edge where the tests can be executed.  
-By default, the grid env serves a maximum concurrency of 2 instances per browser. By setting the env variable `NODE_CONCURRENCY` you can alter this which for instance can be handy in a CI context where you might wanna run with a higher concurrency if you have beefy runners. This will also affect how many tests webdriverIO will run concurrently accordingly.  
+By default, the grid env serves a maximum concurrency of 2 instances per browser. By setting the env variable `NODE_CONCURRENCY` you can alter this which for instance can be handy in a CI context where you might wanna run with a higher concurrency if you have beefy runners (given that the framework had more tests to run in total than it has now). This will also affect how many tests webdriverIO will run concurrently accordingly.  
 Note that you have to restart the env when you've altered this value.  
 To start the env, run:
 
@@ -73,7 +73,7 @@ To run the tests headless, run:
 
 The headless tests will always use the Selenium Grid env so make sure it is up and running.
 
-You also have the option to execute the test fron inside a docker container. To do this, run:
+You also have the option to execute the tests inside a docker container. To do this, run:
 
 ```
 > npm run wdio:dockerized
