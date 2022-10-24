@@ -2,8 +2,6 @@
 
 This is a e2e test framework build using [webdriverIO](https://webdriver.io/) that is set to validate [this](https://www.volvocars.com/intl/v/car-safety/a-million-more) page. The framework supports both functional and visual regression tests.
 
-[[TOC]]
-
 ## Preconditions
 
 You need the following support tools installed
